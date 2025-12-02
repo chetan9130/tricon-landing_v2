@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import AnimatedBackground from "@/components/AnimatedBackground";
-import LogoIcon from "@/components/LogoIcon";
+import { HeroGeometric } from "@/components/ui/shape-landing-hero";
+import TrikonLogo from "@/components/TrikonLogo";
 import SearchInput from "@/components/SearchInput";
 import SuggestionChips from "@/components/SuggestionChips";
 import ProjectCard from "@/components/ProjectCard";
@@ -13,49 +13,39 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
-      <AnimatedBackground />
+    <div className="min-h-screen bg-[#030303] text-white relative overflow-hidden">
+      {/* Hero Section with Geometric Background */}
+      <div className="absolute inset-0">
+        <HeroGeometric
+          badge="Trikon"
+          title1="Build Something"
+          title2="Extraordinary"
+        />
+      </div>
       
-      <div className="relative z-10">
+      <div className="relative z-20">
         {/* Header */}
         <header className="flex items-center justify-between px-8 py-6">
           <div className="flex items-center gap-3">
-            <LogoIcon />
-            <span className="text-xl font-semibold">Vibe</span>
+            <TrikonLogo />
+            <span className="text-xl font-semibold bg-gradient-to-r from-teal-400 to-violet-400 bg-clip-text text-transparent">Trikon</span>
           </div>
           
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="flex items-center gap-2 px-4 py-2 backdrop-blur-xl bg-card/40 border border-border/50 rounded-full"
+            className="flex items-center gap-2 px-4 py-2 backdrop-blur-xl bg-white/[0.03] border border-white/[0.08] rounded-full"
           >
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-sm font-medium">
-              M
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-teal-500 to-violet-500 flex items-center justify-center text-sm font-medium text-white">
+              T
             </div>
-            <span className="text-sm">manas kulkarni</span>
+            <span className="text-sm text-white/60">Get Started</span>
           </motion.div>
         </header>
 
-        {/* Hero Section */}
-        <main className="container mx-auto px-8 pt-20 pb-32">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <div className="inline-flex items-center justify-center mb-6">
-              <LogoIcon />
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-foreground via-foreground to-muted-foreground bg-clip-text text-transparent">
-              Build something with Vibe
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              Create apps and websites by chatting with AI.
-            </p>
-          </motion.div>
-
+        {/* Content Section */}
+        <main className="container mx-auto px-8 pt-[60vh] pb-32">
           {/* Search Input */}
           <div className="mb-8">
             <SearchInput />
@@ -73,7 +63,7 @@ const Index = () => {
             transition={{ delay: 0.6 }}
             className="max-w-6xl mx-auto"
           >
-            <h2 className="text-2xl font-semibold mb-6">manas's Vibes</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-white/80">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project, index) => (
                 <ProjectCard
