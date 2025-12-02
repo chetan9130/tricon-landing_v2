@@ -20,13 +20,12 @@ const SearchInput = () => {
           placeholder="What would like to build"
           className="w-full px-6 py-5 bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none text-lg"
         />
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="absolute right-3 top-1/2 -translate-y-1/2 p-3 rounded-xl bg-gradient-to-r from-primary to-accent text-primary-foreground hover:shadow-lg hover:shadow-primary/20 transition-all"
-        >
-          <Send className="w-5 h-5" />
-        </motion.button>
+        <button
+  className="absolute right-3 top-1/2 -translate-y-1/2 p-3 rounded-xl bg-gradient-to-r from-primary to-accent text-primary-foreground hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-90"
+>
+  <Send className="w-5 h-5" />
+</button>
+
       </div>
       
       <p className="text-muted-foreground text-sm text-center mt-4">

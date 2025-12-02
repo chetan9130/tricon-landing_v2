@@ -1,36 +1,43 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
 import TrikonLogo from "@/components/TrikonLogo";
 import SearchInput from "@/components/SearchInput";
 import SuggestionChips from "@/components/SuggestionChips";
 import ProjectCard from "@/components/ProjectCard";
+import Loader from "@/components/Loader";
+import Navbar from "@/components/Navbar";
 
 const Index = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // simulate loading (you can replace with actual API load)
+    setTimeout(() => setLoading(false), 2000);
+  }, []);
+
   const projects = [
     { emoji: "🎵", title: "spotify-clone" },
     { emoji: "🎬", title: "netflix-concept" },
     { emoji: "📊", title: "dashboard-ui" },
   ];
 
+  if (loading) return <Loader />;
+
   return (
+    
     <div className="min-h-screen bg-[#030303] text-white relative overflow-hidden">
-      {/* Hero Section with Geometric Background */}
       <div className="absolute inset-0">
-        <HeroGeometric
-          badge="Trikon"
-          title1="Build Something"
-          title2="Extraordinary"
-        />
+        <HeroGeometric badge="Trikon" title1="Build Something" title2="Extraordinary" />
       </div>
-      
+
       <div className="relative z-20">
-        {/* Header */}
         <header className="flex items-center justify-between px-8 py-6">
           <div className="flex items-center gap-3">
             <TrikonLogo />
             <span className="text-xl font-semibold bg-gradient-to-r from-teal-400 to-violet-400 bg-clip-text text-transparent">Trikon</span>
           </div>
-          
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -44,19 +51,15 @@ const Index = () => {
           </motion.div>
         </header>
 
-        {/* Content Section */}
         <main className="container mx-auto px-8 pt-[60vh] pb-32">
-          {/* Search Input */}
           <div className="mb-8">
             <SearchInput />
           </div>
 
-          {/* Suggestion Chips */}
           <div className="mb-24">
             <SuggestionChips />
           </div>
 
-          {/* Projects Section */}
           <motion.section
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -98,7 +98,7 @@ function HeroGeometric({
 
             <div className="absolute inset-0 overflow-hidden">
                 <ElegantShape
-                    delay={0.3}
+                    delay={0.2}
                     width={600}
                     height={140}
                     rotate={12}
@@ -164,7 +164,7 @@ function HeroGeometric({
                         initial="hidden"
                         animate="visible"
                     >
-                        <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight">
+                        <h1 className="text-4xl sm:text-4xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tight">
                             <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
                                 {title1}
                             </span>
