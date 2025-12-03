@@ -87,7 +87,7 @@ export function VercelV0Chat() {
       </h2>
 
       <div className="w-full">
-        <div className="relative bg-white/[0.03] backdrop-blur-xl rounded-xl border border-white/[0.08]">
+        <div className="relative bg-black/60 backdrop-blur-xl rounded-xl border border-white/[0.1]">
           <div className="overflow-y-auto">
             <Textarea
               ref={textareaRef}
@@ -192,7 +192,7 @@ function ActionButton({ icon, label }: ActionButtonProps) {
   return (
     <button
       type="button"
-      className="flex items-center gap-2 px-4 py-2 bg-white/[0.03] hover:bg-white/[0.06] rounded-full border border-white/[0.08] text-white/50 hover:text-white transition-colors"
+      className="flex items-center gap-2 px-4 py-2 bg-black/50 hover:bg-black/70 rounded-full border border-white/[0.1] text-white/50 hover:text-white transition-colors"
     >
       {icon}
       <span className="text-xs">{label}</span>
