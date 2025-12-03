@@ -87,7 +87,16 @@ export function VercelV0Chat() {
       </h2>
 
       <div className="w-full">
-        <div className="relative bg-black/60 backdrop-blur-xl rounded-xl border border-white/[0.1]">
+     <div
+  className="
+    relative rounded-xl bg-black/60 backdrop-blur-xl
+    border border-white/10
+    shadow-[0_0_10px_rgba(0,255,255,0.18),0_0_15px_rgba(168,85,247,0.18)]
+  "
+>
+
+
+
           <div className="overflow-y-auto">
             <Textarea
               ref={textareaRef}
