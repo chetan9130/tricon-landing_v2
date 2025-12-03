@@ -40,9 +40,9 @@ export const AuroraHero = ({ children }: AuroraHeroProps) => {
       className="relative grid min-h-screen place-content-center overflow-hidden bg-[#030303] px-4 py-24 text-white"
     >
       <div className="relative z-10 flex flex-col items-center">
-        <span className="mb-1.5 inline-block rounded-full bg-white/[0.05] border border-white/[0.1] px-3 py-1.5 text-sm text-white/60">
+        {/* <span className="mb-1.5 inline-block rounded-full bg-white/[0.05] border border-white/[0.1] px-3 py-1.5 text-sm text-white/60">
           AI-Powered Builder
-        </span>
+        </span> */}
         <h1 className="max-w-3xl bg-gradient-to-br from-white to-white/60 bg-clip-text text-center text-3xl font-bold leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
           Build Something Extraordinary with Trikon
         </h1>

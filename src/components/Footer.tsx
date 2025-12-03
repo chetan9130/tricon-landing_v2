@@ -62,9 +62,7 @@ export default function Footer() {
           <p className="text-white/30 text-sm">
             © {new Date().getFullYear()} Trikon. All rights reserved.
           </p>
-          <p className="text-white/30 text-sm">
-            Built with ❤️ for developers everywhere
-          </p>
+         
         </div>
       </div>
     </footer>

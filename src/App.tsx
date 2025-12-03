@@ -8,6 +8,7 @@ import Features from "./pages/Features";
 import Pricing from "./pages/Pricing";
 import Faq from "./pages/Faq";
 import NotFound from "./pages/NotFound";
+import ProjectCard from "./components/ProjectCard";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,11 @@ const App = () => (
           <Route path="/features" element={<Features />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/faq" element={<Faq />} />
+         <Route
+  path="/project"
+  element={<ProjectCard emoji="🚀" title="Demo Project" delay={0.1} />}
+/>
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
