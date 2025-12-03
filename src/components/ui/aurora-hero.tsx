@@ -43,7 +43,7 @@ export const AuroraHero = ({ children }: AuroraHeroProps) => {
         {/* <span className="mb-1.5 inline-block rounded-full bg-white/[0.05] border border-white/[0.1] px-3 py-1.5 text-sm text-white/60">
           AI-Powered Builder
         </span> */}
-        <h1 className="max-w-3xl bg-gradient-to-br from-white to-white/60 bg-clip-text text-center text-3xl font-bold leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
+        <h1 className="mid-w-3xl bg-gradient-to-br from-white to-white/60 bg-clip-text text-center text-3xl font-bold leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
           Build Something with Trikon
         </h1>
         {/* <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed text-white/40">
