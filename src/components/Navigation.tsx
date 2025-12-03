@@ -42,6 +42,7 @@ export default function Navigation() {
               flex items-center gap-10 px-10 py-3
               bg-white/5 border border-white/10 backdrop-blur-xl
               rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.2)]
+               shadow-[0_0_6px_rgba(0,255,255,0.25),0_0_10px_rgba(168,85,247,0.25)]
             "
           >
             {links.map(({ name, path }) => {

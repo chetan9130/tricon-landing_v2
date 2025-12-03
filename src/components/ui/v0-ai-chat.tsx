@@ -87,16 +87,15 @@ export function VercelV0Chat() {
       </h2>
 
       <div className="w-full">
-     <div
-  className="
-    relative rounded-xl bg-black/60 backdrop-blur-xl
-    border border-white/10
-    shadow-[0_0_10px_rgba(0,255,255,0.18),0_0_15px_rgba(168,85,247,0.18)]
-  "
->
 
-
-
+        {/* CHAT CONTAINER WITH GLOW */}
+        <div
+          className="
+            relative rounded-xl bg-black/60 backdrop-blur-xl
+            border border-white/10
+            shadow-[0_0_10px_rgba(0,255,255,0.18),0_0_15px_rgba(168,85,247,0.18)]
+          "
+        >
           <div className="overflow-y-auto">
             <Textarea
               ref={textareaRef}
@@ -136,14 +135,21 @@ export function VercelV0Chat() {
                 </span>
               </button>
             </div>
+
             <div className="flex items-center gap-2">
               <button
                 type="button"
-                className="px-2 py-1 rounded-lg text-sm text-white/40 transition-colors border border-dashed border-white/[0.1] hover:border-white/[0.2] hover:bg-white/[0.05] flex items-center justify-between gap-1"
+                className="
+                  px-2 py-1 rounded-lg text-sm text-white/40 transition-colors
+                  border border-dashed border-white/[0.1]
+                  hover:border-white/[0.2] hover:bg-white/[0.05]
+                  flex items-center justify-between gap-1
+                "
               >
                 <PlusIcon className="w-4 h-4" />
                 Project
               </button>
+
               <button
                 type="button"
                 className={cn(
@@ -165,27 +171,13 @@ export function VercelV0Chat() {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-3 mt-4">
-          <ActionButton
-            icon={<ImageIcon className="w-4 h-4" />}
-            label="Clone a Screenshot"
-          />
-          <ActionButton
-            icon={<Figma className="w-4 h-4" />}
-            label="Import from Figma"
-          />
-          <ActionButton
-            icon={<FileUp className="w-4 h-4" />}
-            label="Upload a Project"
-          />
-          <ActionButton
-            icon={<MonitorIcon className="w-4 h-4" />}
-            label="Landing Page"
-          />
-          <ActionButton
-            icon={<CircleUserRound className="w-4 h-4" />}
-            label="Sign Up Form"
-          />
+        {/* GLOWING ACTION BUTTONS */}
+        <div className="flex flex-wrap items-center justify-center gap-3 mt-4 ">
+          <ActionButton icon={<ImageIcon className="w-4 h-4" />} label="Clone a Screenshot" />
+          <ActionButton icon={<Figma className="w-4 h-4" />} label="Import from Figma" />
+          <ActionButton icon={<FileUp className="w-4 h-4" />} label="Upload a Project" />
+          <ActionButton icon={<MonitorIcon className="w-4 h-4" />} label="Landing Page" />
+          <ActionButton icon={<CircleUserRound className="w-4 h-4" />} label="Sign Up Form" />
         </div>
       </div>
     </div>
@@ -201,7 +193,17 @@ function ActionButton({ icon, label }: ActionButtonProps) {
   return (
     <button
       type="button"
-      className="flex items-center gap-2 px-4 py-2 bg-black/50 hover:bg-black/70 rounded-full border border-white/[0.1] text-white/50 hover:text-white transition-colors"
+      className="
+        flex items-center gap-2 px-4 py-2 rounded-full
+        bg-black/50 text-white/50
+        border border-white/10
+
+        /* constant glowing border */
+        shadow-[0_0_6px_rgba(0,255,255,0.25),0_0_10px_rgba(168,85,247,0.25)]
+
+        hover:text-white hover:bg-black/70
+        transition-all
+      "
     >
       {icon}
       <span className="text-xs">{label}</span>
