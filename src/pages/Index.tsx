@@ -5,32 +5,32 @@ import Navigation from "@/components/Navigation";
 import Loader from "@/components/Loader";
 import { Link } from "react-router-dom";
 
-const projects = [
-  {
-    id: "crispy-canvas",
-    title: "Crispy Canvas",
-    imgUrl:
-      "https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350",
-    avatar: "https://i.pravatar.cc/40?img=5",
-    viewed: "20 minutes ago",
-  },
-  {
-    id: "pet-partner-portal",
-    title: "Pet Partner Portal",
-    imgUrl:
-      "https://images.pexels.com/photos/46024/pexels-photo-46024.jpeg?auto=compress&cs=tinysrgb&h=350",
-    avatar: "https://i.pravatar.cc/40?img=6",
-    viewed: "4 days ago",
-  },
-  {
-    id: "project-atlas",
-    title: "Project Atlas",
-    imgUrl:
-      "https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&h=350",
-    avatar: "https://i.pravatar.cc/40?img=7",
-    viewed: "4 days ago",
-  },
-];
+// const projects = [
+//   {
+//     id: "crispy-canvas",
+//     title: "Crispy Canvas",
+//     imgUrl:
+//       "https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350",
+//     avatar: "https://i.pravatar.cc/40?img=5",
+//     viewed: "20 minutes ago",
+//   },
+//   {
+//     id: "pet-partner-portal",
+//     title: "Pet Partner Portal",
+//     imgUrl:
+//       "https://images.pexels.com/photos/46024/pexels-photo-46024.jpeg?auto=compress&cs=tinysrgb&h=350",
+//     avatar: "https://i.pravatar.cc/40?img=6",
+//     viewed: "4 days ago",
+//   },
+//   {
+//     id: "project-atlas",
+//     title: "Project Atlas",
+//     imgUrl:
+//       "https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&h=350",
+//     avatar: "https://i.pravatar.cc/40?img=7",
+//     viewed: "4 days ago",
+//   },
+// ];
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
@@ -50,7 +50,7 @@ const Index = () => {
         <VercelV0Chat />
 
         {/* ------------------ PROJECT SECTION ------------------ */}
-        <section className="mt-20 px-6 md:px-12 w-full">
+        {/* <section className="mt-20 px-6 md:px-12 w-full">
           <div className="flex items-center justify-between mb-6">
             <div className="flex gap-6 text-lg font-medium">
               <button className="text-white bg-white/10 px-4 py-2 rounded-xl backdrop-blur-md">
@@ -67,10 +67,10 @@ const Index = () => {
             >
               Browse all →
             </Link>
-          </div>
+          </div> */}
 
           {/* PROJECT GRID */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((p) => (
               <Link to={`/project/${p.id}`} key={p.id}>
                 <div className="group cursor-pointer">
@@ -98,8 +98,8 @@ const Index = () => {
                 </div>
               </Link>
             ))}
-          </div>
-        </section>
+          </div> */}
+        {/* </section> */}
       </AuroraHero>
     </div>
   );
