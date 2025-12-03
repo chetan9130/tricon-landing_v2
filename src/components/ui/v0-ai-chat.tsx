@@ -70,6 +70,29 @@ export function VercelV0Chat() {
     maxHeight: 200,
   });
 
+  // ============== Typing Placeholder Animation ==============
+  const placeholderText = "Ask Trikon to build something...";
+  const [placeholder, setPlaceholder] = useState("");
+  const placeholderIndex = useRef(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPlaceholder((prev) => {
+        if (placeholderIndex.current < placeholderText.length) {
+          const next = prev + placeholderText[placeholderIndex.current];
+          placeholderIndex.current += 1;
+          return next;
+        } else {
+          clearInterval(interval);
+          return prev;
+        }
+      });
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // ============== Send on Enter ==============
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
@@ -87,8 +110,8 @@ export function VercelV0Chat() {
       </h2>
 
       <div className="w-full">
-
-        {/* CHAT CONTAINER WITH GLOW */}
+        
+        {/* Chat container with glow */}
         <div
           className="
             relative rounded-xl bg-black/60 backdrop-blur-xl
@@ -96,6 +119,7 @@ export function VercelV0Chat() {
             shadow-[0_0_10px_rgba(0,255,255,0.18),0_0_15px_rgba(168,85,247,0.18)]
           "
         >
+        
           <div className="overflow-y-auto">
             <Textarea
               ref={textareaRef}
@@ -105,7 +129,7 @@ export function VercelV0Chat() {
                 adjustHeight();
               }}
               onKeyDown={handleKeyDown}
-              placeholder="Ask Trikon to build something..."
+              placeholder={placeholder}   // ⬅️ Animated placeholder
               className={cn(
                 "w-full px-4 py-3",
                 "resize-none",
@@ -171,7 +195,7 @@ export function VercelV0Chat() {
           </div>
         </div>
 
-        {/* GLOWING ACTION BUTTONS */}
+        {/* Action buttons with glow */}
         <div className="flex flex-wrap items-center justify-center gap-3 mt-4 ">
           <ActionButton icon={<ImageIcon className="w-4 h-4" />} label="Clone a Screenshot" />
           <ActionButton icon={<Figma className="w-4 h-4" />} label="Import from Figma" />
@@ -198,7 +222,6 @@ function ActionButton({ icon, label }: ActionButtonProps) {
         bg-black/50 text-white/50
         border border-white/10
 
-        /* constant glowing border */
         shadow-[0_0_6px_rgba(0,255,255,0.25),0_0_10px_rgba(168,85,247,0.25)]
 
         hover:text-white hover:bg-black/70
