@@ -74,16 +74,19 @@ export default function Navigation() {
 
         {/* RIGHT (buttons) */}
         <div className="flex items-center justify-end flex-1 gap-3">
+        <Link to="/signup">
           <Button
             variant="ghost"
             className="text-white/70 hover:text-white hover:bg-white/10"
           >
             Sign In
           </Button>
-
+          </Link>
+          <Link to="/features">
           <Button className="bg-gradient-to-r from-teal-500 to-violet-500 hover:from-teal-600 hover:to-violet-600 text-white border-0">
             Get Started
           </Button>
+          </Link>
         </div>
 
       </div>

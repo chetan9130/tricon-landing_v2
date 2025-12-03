@@ -9,6 +9,7 @@ import Pricing from "./pages/Pricing";
 import Faq from "./pages/Faq";
 import NotFound from "./pages/NotFound";
 import ProjectCard from "./components/ProjectCard";
+import SignUp from "./pages/SignUp";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
   path="/project"
   element={<ProjectCard emoji="🚀" title="Demo Project" delay={0.1} />}
 />
+          <Route path="/signup" element={<SignUp />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
