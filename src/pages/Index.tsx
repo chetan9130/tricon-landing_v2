@@ -20,14 +20,9 @@ const Index = () => {
     <div className="min-h-screen bg-[#030303] text-white">
       <Navigation />
       
-      <AuroraHero />
-
-      <section className="py-24 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-teal-500/[0.02] to-transparent" />
-        <div className="relative z-10">
-          <VercelV0Chat />
-        </div>
-      </section>
+      <AuroraHero>
+        <VercelV0Chat />
+      </AuroraHero>
 
       <PricingCards />
 

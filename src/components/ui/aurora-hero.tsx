@@ -2,8 +2,7 @@
 
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import React, { useEffect } from "react";
-import { FiArrowRight } from "react-icons/fi";
+import React, { useEffect, ReactNode } from "react";
 import {
   useMotionTemplate,
   useMotionValue,
@@ -13,7 +12,11 @@ import {
 
 const COLORS_TOP = ["#14b8a6", "#8b5cf6", "#06b6d4", "#a855f7"];
 
-export const AuroraHero = () => {
+interface AuroraHeroProps {
+  children?: ReactNode;
+}
+
+export const AuroraHero = ({ children }: AuroraHeroProps) => {
   const color = useMotionValue(COLORS_TOP[0]);
 
   useEffect(() => {
@@ -47,22 +50,7 @@ export const AuroraHero = () => {
           Transform your ideas into reality with our AI-powered platform. 
           Create stunning applications in minutes, not months.
         </p>
-        <motion.button
-          style={{
-            border,
-            boxShadow,
-          }}
-          whileHover={{
-            scale: 1.015,
-          }}
-          whileTap={{
-            scale: 0.985,
-          }}
-          className="group relative flex w-fit items-center gap-1.5 rounded-full bg-white/[0.05] px-4 py-2 text-white transition-colors hover:bg-white/[0.1]"
-        >
-          Get Started Free
-          <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
-        </motion.button>
+        {children}
       </div>
 
       <div className="absolute inset-0 z-0">
