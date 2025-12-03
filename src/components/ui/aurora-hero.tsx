@@ -44,12 +44,12 @@ export const AuroraHero = ({ children }: AuroraHeroProps) => {
           AI-Powered Builder
         </span> */}
         <h1 className="max-w-3xl bg-gradient-to-br from-white to-white/60 bg-clip-text text-center text-3xl font-bold leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
-          Build Something Extraordinary with Trikon
+          Build Something with Trikon
         </h1>
-        <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed text-white/40">
+        {/* <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed text-white/40">
           Transform your ideas into reality with our AI-powered platform. 
           Create stunning applications in minutes, not months.
-        </p>
+        </p> */}
         {children}
       </div>
 
