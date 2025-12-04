@@ -3,6 +3,7 @@ import { AuroraHero } from "@/components/ui/aurora-hero";
 import { VercelV0Chat } from "@/components/ui/v0-ai-chat";
 import Navigation from "@/components/Navigation";
 import Loader from "@/components/Loader";
+import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
 // const projects = [
@@ -33,14 +34,14 @@ import { Link } from "react-router-dom";
 // ];
 
 const Index = () => {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-  const timer = setTimeout(() => setLoading(false), 2000);
-     return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  // const timer = setTimeout(() => setLoading(false), 2000);
+  //    return () => clearTimeout(timer);
+  // }, []);
 
-  if (loading) return <Loader />;
+  // if (loading) return <Loader />;
 
   return (
     <div className="min-h-screen bg-[#030303] text-white">
@@ -101,6 +102,7 @@ const Index = () => {
           </div> */}
         {/* </section> */}
       </AuroraHero>
+      <Footer />
     </div>
   );
 };

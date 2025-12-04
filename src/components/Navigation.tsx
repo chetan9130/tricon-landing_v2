@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import TrikonLogo from "./TrikonLogo";
 import { Button } from "@/components/ui/button";
+import logo from "/src/img/logo.png"
 
 export default function Navigation() {
   const location = useLocation();
@@ -28,10 +29,11 @@ export default function Navigation() {
         {/* LEFT (logo) */}
         <div className="flex items-center flex-1">
           <Link to="/" className="flex items-center gap-3">
-            <TrikonLogo />
+            {/* <TrikonLogo />
             <span className="text-xl font-semibold bg-gradient-to-r from-teal-400 to-violet-400 bg-clip-text text-transparent">
               Trikon
-            </span>
+            </span> */}
+            <img src={logo} alt="Trikon Logo" className="w-25 h-11"/>
           </Link>
         </div>
 
@@ -60,13 +62,13 @@ export default function Navigation() {
                     {name}
                   </Link>
 
-                  {active && (
+                  {/* {active && (
                     <motion.div
-                      layoutId="underline"
+                     layoutId="underline"
                       className="absolute left-1.5 -translate-x-1.5 -bottom-1 w-6 h-1 bg-blue-400 rounded-full"
                       transition={{ type: "spring", stiffness: 260, damping: 30 }}
                     />
-                  )}
+                  )} */}
                 </div>
               );
             })}

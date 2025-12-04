@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import TrikonLogo from "./TrikonLogo";
 import { Github, Twitter, Linkedin } from "lucide-react";
+import logo from "/src/img/logo.png"
 
 const footerLinks = {
   Product: ["Features", "Pricing", "Integrations", "Changelog"],
@@ -18,10 +19,11 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
           <div className="col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <TrikonLogo />
+              {/* <TrikonLogo />
               <span className="text-xl font-semibold bg-gradient-to-r from-teal-400 to-violet-400 bg-clip-text text-transparent">
                 Trikon
-              </span>
+              </span> */}
+              <img src={logo} alt="Trikon Logo" className="w-25 h-10"/>
             </div>
             <p className="text-white/40 text-sm mb-6 max-w-xs">
               Build extraordinary applications with AI-powered development tools.
